@@ -1,0 +1,27 @@
+[2026-04-20T06:44:58Z] === ENRICH ITERATION 1 START | repo=apple/swift-nio sha=558f24a4 ===
+[2026-04-20T06:44:58Z] [iter=1] PHASE START: enrich repo=apple/swift-nio sha=558f24a4 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/558f24a4-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/558f24a4647193b5a0e2104031b71c55d31ff83a.nq.gz
+[2026-04-20T06:44:58Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-04-20T06:46:11Z] [iter=1] AST store loaded triples=7669738 load_secs=70 mem_mb=1051 MB
+[2026-04-20T06:46:11Z] [iter=1] Step 2: Finding LSP targets mem_mb=1051 MB
+[2026-04-20T06:46:47Z] [iter=1] LSP targets found call_sites=63439 imports=1609 extends=0 implements=0 secs=36
+[2026-04-20T06:47:19Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=1051 MB
+[2026-04-20T06:47:59Z] [iter=1] Position index built positions=430662 nodes_with_types=517841 secs=40 mem_mb=1335 MB
+[2026-04-20T06:47:59Z] [iter=1] Step 3: Starting LSP resolution mem_mb=1335 MB already_completed_types=[] already_completed_files=0
+[2026-04-20T06:47:59Z] [iter=1] Resolving target type target_type=call_site count=63439
+[2026-04-20T06:48:03Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.1 files_done=0 resolved=0 errors=63439 current=scripts/analyze_performance_results.rb
+[2026-04-20T06:50:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.9 files_done=1 resolved=34 errors=63490 current=Sources/CNIOLLHTTP/c_nio_llhttp.c
+[2026-04-20T07:05:56Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=21.0 files_done=2 resolved=35 errors=63774 current=IntegrationTests/allocation-counter-tests-framework/template/HookedFunctionsDoHook/Sources/HookedFunctions/src/hooked-functions-darwin.c
+[2026-04-20T07:08:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=23.1 files_done=7 resolved=84 errors=63813 current=Sources/CNIOSHA1/c_nio_sha1.c
+[2026-04-20T07:12:57Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=28.0 files_done=8 resolved=84 errors=63904 current=Sources/CNIOLinux/shim.c
+[2026-04-20T07:14:01Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=29.1 files_done=9 resolved=100 errors=63924 current=Sources/CNIOWindows/include/CNIOWindows.h
+[2026-04-20T07:14:37Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=29.7 files_done=11 resolved=100 errors=63935 current=Sources/CNIOOpenBSD/shim.c
+[2026-04-20T07:16:37Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=31.7 files_done=14 resolved=115 errors=63972 current=Sources/CNIOWindows/shim.c
+[2026-04-20T07:17:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=32.3 files_done=16 resolved=119 errors=63984 current=Sources/CNIOWindows/WSAStartup.c
+[2026-04-20T07:28:38Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=43.7 files_done=18 resolved=127 errors=63985 current=Sources/CNIOAtomics/src/c-nioatomics.c
+[2026-04-20T07:30:22Z] [iter=1] Target type resolved target_type=call_site resolved=182 errors=64016 secs=2543 mem_mb=1335 MB
+[2026-04-20T07:30:22Z] [iter=1] Resolving target type target_type=import_statement count=1609
+[2026-04-20T07:30:24Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=45.4 files_done=0 resolved=0 errors=1609 current=Sources/CNIOLinux/include/CNIOLinux.h
+[2026-04-20T07:30:30Z] [iter=1] Target type resolved target_type=import_statement resolved=14 errors=1609 secs=8 mem_mb=1335 MB
+[2026-04-20T07:30:34Z] [iter=1] Step 5: Writing final enrichment file triples=8818
+[2026-04-20T07:30:34Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/558f24a4647193b5a0e2104031b71c55d31ff83a.nq.gz size_kb=176
+[2026-04-20T07:30:34Z] [iter=1] PHASE END: enrich elapsed_s=2737 elapsed_min=45.6 total_triples=8818
